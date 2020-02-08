@@ -8,6 +8,7 @@ import { UserService } from '../../services/user/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { routerTransition } from '../../services/config/config.service';
 
+
 @Component({
 	selector: 'app-login',
 	templateUrl: './login.component.html',
@@ -17,6 +18,7 @@ import { routerTransition } from '../../services/config/config.service';
 })
 export class LoginComponent implements OnInit {
 	private loginForm : FormGroup;
+	
 	constructor(private formBuilder: FormBuilder,private router: Router, private userService:UserService,private toastr: ToastrService) { 
 		this.loginForm = this.formBuilder.group({
 			email: ['',  [Validators.required, ValidationService.emailValidator]],

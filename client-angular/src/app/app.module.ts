@@ -26,13 +26,14 @@ import { InterestAddComponent } from './components/interest/add/interest-add.com
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent, homeChildRoutes } from './components/home/home.component';
 import { HighlightInterestDirective } from './directives/highlight-interest.directive';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
 // Parent Routes
 const routes : Routes = [
 {
-	path: '',
+	path: '', // Default Route
 	component: HomeComponent,
 	children :homeChildRoutes,
 	canActivate : [AuthService]
@@ -42,7 +43,11 @@ const routes : Routes = [
 	component: LoginComponent
 },
 {
-	path: '**',
+	path: 'register',
+	component: RegisterComponent
+},
+{
+	path: '**', // If Route is anything but a defined route, route to Default
 	redirectTo: ''
 }
 ];
@@ -57,7 +62,8 @@ const routes : Routes = [
 	HomeComponent,
 	FilterPipe,
 	PhonePipe,
-	HighlightInterestDirective
+	HighlightInterestDirective,
+	RegisterComponent
 	],
 	imports: [
 	BrowserModule,

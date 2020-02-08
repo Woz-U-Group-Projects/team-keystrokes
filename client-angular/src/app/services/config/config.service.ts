@@ -33,6 +33,14 @@ export class ValidationService {
 			return { 'invalidPassword': true };
 		}
 	}
+	static userNameValidator(control) {
+		// if username == any value in project.db.UserName, Invalid
+		if (control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
+			return null;
+		} else {
+			return { 'invalidUserName': true };
+		}
+	}
 
 	static checkLimit(min: number, max: number): ValidatorFn {
 		return (c: AbstractControl): { [key: string]: boolean } | null => {

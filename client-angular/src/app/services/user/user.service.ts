@@ -23,6 +23,21 @@ export class UserService {
 			};
 		}
 	}
+	doRegister(data){
+		if (data.email == "admin@yopmail.com" && data.username == data.username && data.password == "admin123") {
+			return {
+				code : 200,
+				message : "Login Successful",
+				data : data
+			};
+		}else{
+			return {
+				code : 503,
+				message : "Invalid Credentials",
+				data : null
+			};
+		}
+	}
 
 	// doRegister(data){
 		// 	return this.http.post('user-add.php',data);	

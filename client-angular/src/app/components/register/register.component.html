@@ -1,0 +1,25 @@
+
+
+<div class="w3-container align-center w3-card login-card w3-dark-grey">
+	<form [formGroup]="registerForm" (ngSubmit)="doRegister()">
+		<div class="text-center">
+			<img src="assets/hashdashlogo.png" class="logo">
+			<span><h2>HashDash</h2></span>
+		</div>
+
+		<label class="w3-text-white"><b>Email</b></label>
+		<input class="w3-input w3-border" type="email" formControlName="email">
+		<div class="w3-panel w3-red"  *ngIf="registerForm.controls.email.invalid && (registerForm.controls.email.dirty || registerForm.controls.email.touched)">Please enter valid email address</div> 
+
+    <label class="w3-text-white"><b>Username</b></label>
+		<input class="w3-input w3-border" type="email" formControlName="username">
+		<div class="w3-panel w3-red"  *ngIf="registerForm.controls.username.invalid && (registerForm.controls.username.dirty || registerForm.controls.username.touched)">Please enter valid email address</div> 
+
+		<label class="w3-text-white"><b>Password</b></label>
+		<input class="w3-input w3-border" type="password" formControlName="password">
+		<div class="w3-panel w3-red"  *ngIf="registerForm.controls.password.invalid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">Password must be at least 6 characters long, and contain a number</div> 
+		<br>
+		<button class="w3-btn w3-black" type="submit" routerLink="/register" >Register <i class="w3-medium fa fa-user-o"></i> </button>
+
+	</form>
+	</div> 
