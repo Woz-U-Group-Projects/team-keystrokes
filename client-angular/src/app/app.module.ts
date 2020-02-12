@@ -63,7 +63,7 @@ const routes : Routes = [
 	FilterPipe,
 	PhonePipe,
 	HighlightInterestDirective,
-	RegisterComponent
+	RegisterComponent,
 	],
 	imports: [
 	BrowserModule,

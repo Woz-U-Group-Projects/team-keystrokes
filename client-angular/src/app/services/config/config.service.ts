@@ -35,7 +35,7 @@ export class ValidationService {
 	}
 	static userNameValidator(control) {
 		// if username == any value in project.db.UserName, Invalid
-		if (control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
+		if (control.value.match(/[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]/)) {
 			return null;
 		} else {
 			return { 'invalidUserName': true };

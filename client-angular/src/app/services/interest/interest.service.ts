@@ -10,7 +10,7 @@
    // Get all interests list via API or any data storage
    getAllInterests(){
      let interestList:any;
-     if(localStorage.getItem('interests') && localStorage.getItem('interests') != '') {
+     if(localStorage.getItem('interests') && localStorage.getItem('interests') !== '') {
        interestList = {
          code : 200,
          message : "Interests List Fetched Successfully",

@@ -6,6 +6,7 @@ namespace server_csharp_sqlite.Models
     public ProjectDbContext(DbContextOptions<ProjectDbContext> options) : base(options){}
     
     public DbSet<Project> Projects {get;set;}
+    public DbSet<Interest> Interests {get; set;}
 
   }
 }

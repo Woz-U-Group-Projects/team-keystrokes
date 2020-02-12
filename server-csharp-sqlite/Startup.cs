@@ -53,16 +53,7 @@ namespace server_csharp_sqlite
         app.UseHsts();
       }
       app.UseCors("CorsPolicy");
-      app.UseMvc(
-        //added from documentation
-        routes =>
-      {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
-      }
-        //end add
-      );
+      app.UseMvc();
     }
   }
 }
