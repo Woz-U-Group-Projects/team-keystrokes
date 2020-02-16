@@ -28,6 +28,20 @@ namespace server_csharp_sqlite.Migrations
 
                     b.ToTable("Projects");
                 });
+
+            modelBuilder.Entity("server_csharp_sqlite.Models.Task", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.Property<bool>("complete");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Task");
+                });
 #pragma warning restore 612, 618
         }
     }

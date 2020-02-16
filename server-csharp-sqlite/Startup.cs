@@ -27,6 +27,7 @@ namespace server_csharp_sqlite
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      
       services.AddCors(options =>
       {
         options.AddPolicy("CorsPolicy",
@@ -36,6 +37,7 @@ namespace server_csharp_sqlite
                     .AllowAnyHeader()
                 );
       });
+
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
       services.AddDbContext<ProjectDbContext>(options => options.UseSqlite("Data Source=project.db"));
     }
