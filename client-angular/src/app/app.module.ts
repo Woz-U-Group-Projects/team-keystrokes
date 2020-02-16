@@ -12,14 +12,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HeadLeftPanelComponent } from './head-left-panel/head-left-panel.component';
 import { HeadComponent } from './head/head.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [AppComponent, TaskDisplayComponent, GetRequestComponent,
-  HeadLeftPanelComponent, HeadComponent, LeftPanelComponent, LoginComponent],
+  HeadComponent, LeftPanelComponent],
   imports: [BrowserModule, BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatInputModule, MatFormFieldModule, MatSidenavModule,
     AppRoutingModule, FormsModule, HttpClientModule],
