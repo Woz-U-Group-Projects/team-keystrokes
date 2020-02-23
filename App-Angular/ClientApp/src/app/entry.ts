@@ -3,6 +3,7 @@ export class Entry {
         public id: number,
         public chapter: string,
         public dateCreated: Date,
-        public body: string
+        public body: string,
+        public wordCount: number
     ) { }
 }
