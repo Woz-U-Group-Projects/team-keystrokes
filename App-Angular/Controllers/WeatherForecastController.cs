@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using App_Angular.Models;
 
-namespace App_Angular.Controllers
+namespace App_Angular
 {
     [ApiController]
     [Route("[controller]")]
