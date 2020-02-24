@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Entry } from '../../app/entry';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { Diary } from '../diary';
 
 
 @Component({
@@ -12,7 +16,19 @@ export class CreateEntryComponent implements OnInit {
 
   wordCount = 0;
 
-  constructor() { }
+  CreateEntryForm = new FormGroup({
+    chapter: new FormControl(''),
+    dateTime: new FormControl(''),
+    entryBody: new FormControl(''),
+    wordCount: new FormControl(''),
+  });
+  private databaseRoute = 'http://localhost:5000';
+  public diaries: Diary[];
+  public entries: Entry[];
+
+  constructor(private http: HttpClient) {
+
+   }
 
   ngOnInit() {
 
@@ -22,9 +38,10 @@ export class CreateEntryComponent implements OnInit {
     this.wordCount = words.split(/\s+/).length;
   }
 
-  // onSubmit() {
-  //   // EVENT EMITTER
+  onSubmit() {
 
-  //   console.warn(this.diaryEntry.value)
-  // }
+  // this.http.post<Diary>(this.databaseRoute, this.CreateEntryForm);
+
+    console.warn(this.CreateEntryForm.value);
+  }
 }

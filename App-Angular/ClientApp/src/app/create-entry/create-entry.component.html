@@ -1,14 +1,15 @@
 <h1>Create New Diary Chapter</h1>
 <div class="container">
-  <form>
+  <form [formGroup]="CreateEntryForm"> 
     <div class="form-group">
       <label for="chapter">Chapter Title</label>
       <input type="text" class="form-control" id="chapter" style="max-width: 50%;" required
         placeholder="The day that...">
     </div>
 
-    <label id="datetime"><strong>Time of Entry:</strong>
-      {{today | date:'medium'}}
+    <label id="dateTime"><strong>Time of Entry: </strong>
+     <input class="form-group" type="text" readonly value="{{today | date:'medium'}}">
+     
     </label>
     <div class="form-group">
       <label for="body">Dear Diary,</label>
@@ -21,12 +22,13 @@
         rows="6"
         placeholder="Today was..."
         (change)="wordCounter($event.target.value)"
+        formControlName="entryBody"
         ></textarea>
       <!-- Text Area HTML -->
 
       <!-- Word Count HTML -->
       <div>
-      <span id="wordCount">Word Count: {{ wordCount }}</span>
+      <label id="wordCount">Word Count: {{ wordCount }}</label>
       </div>
       <!-- / Word Count HTML -->
         </div>

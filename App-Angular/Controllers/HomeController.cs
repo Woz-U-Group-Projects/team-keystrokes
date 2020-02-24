@@ -54,6 +54,17 @@ namespace App_Angular.Controllers
 
 			return Json(diaries);
 		}
+
+		[HttpPost]
+		public void CreateDiary()
+		{
+
+			var context = new ApplicationDatabaseContext()
+			{
+			// this.FormData = new FormData(Object);
+			// FormData.values().
+
+			};
 	}
 	public class ApplicationDatabaseContext : DbContext
 	{
@@ -68,4 +79,5 @@ namespace App_Angular.Controllers
 		public string Title { get; set; }
 		public string Content { get; set; }
 	}
+}
 }
