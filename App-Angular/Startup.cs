@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using App_Angular.Data;
+// using App_Angular.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace App_Angular
@@ -25,8 +25,8 @@ namespace App_Angular
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<ProjectDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("ProjectDbContext")));
+            // services.AddDbContext<ProjectDbContext>(options =>
+            //     options.UseSqlite(Configuration.GetConnectionString("ProjectDbContext")));
         
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

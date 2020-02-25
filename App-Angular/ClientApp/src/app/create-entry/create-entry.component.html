@@ -3,12 +3,12 @@
   <form [formGroup]="CreateEntryForm"> 
     <div class="form-group">
       <label for="chapter">Chapter Title</label>
-      <input type="text" class="form-control" id="chapter" style="max-width: 50%;" required
+      <input type="text" class="form-control" formControlName="chapter" style="max-width: 50%;" required
         placeholder="The day that...">
     </div>
 
     <label id="dateTime"><strong>Time of Entry: </strong>
-     <input class="form-group" type="text" readonly value="{{today | date:'medium'}}">
+     <input class="form-group" type="text" formControlName="dateCreated" readonly>
      
     </label>
     <div class="form-group">
@@ -22,13 +22,14 @@
         rows="6"
         placeholder="Today was..."
         (change)="wordCounter($event.target.value)"
-        formControlName="entryBody"
+        formControlName="body"
         ></textarea>
       <!-- Text Area HTML -->
 
       <!-- Word Count HTML -->
       <div>
-      <label id="wordCount">Word Count: {{ wordCount }}</label>
+      <label id="wordCount">Word Count: </label>
+      <input type="text" readonly class="form-group" formControlName="wordCount" />
       </div>
       <!-- / Word Count HTML -->
         </div>
@@ -37,7 +38,7 @@
 
     </div>
 
-    <button type="submit" class="btn btn-success">Done</button>
+    <button type="submit" (click)="onSubmit()"  class="btn btn-success">Done</button>
 
   </form>
 </div>

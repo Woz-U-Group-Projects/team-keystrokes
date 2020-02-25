@@ -4,6 +4,6 @@ export class Entry {
         public chapter: string,
         public dateCreated: Date,
         public body: string,
-        public wordCount: number
+        public wordCount: string
     ) { }
 }
