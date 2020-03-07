@@ -1,43 +1,43 @@
 <div>
-  <h1>Create a New Journal Entry</h1>
+  <h1>Welcome to your SecureDiary!</h1>
 
-  <form class="border border-dark border bg-light">
-    <table class="table table-inverse">
-      <tr>
-        <td><label>Add into:</label></td>
-
-        <td>
-
-          <div class="input-group mb-3">
-            <div class="dropdown">
-              <button class="btn btn-outline-secondary dropdown-toggle dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">1st date</a>
-                <a class="dropdown-item" href="#">2nd Date</a>
-                <a class="dropdown-item" href="#">3rd Date</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">My Cute Date</a>
-              </div>
-            </div>
-          </div>
-        </td>
+  <table>
+    <tr>
+      <th>Here are your journal entries for the month of February.</th>
       </tr>
-      <tr>
-        <td><label>Date:</label></td>
+    <tr>
+      <td><h3>Title: On February 14th, OMG!!!</h3></td>
       </tr>
-      <tr>
-        <td><label>Title:</label></td>
+    <tr>
+      <td>This happened and then this happened and yes this happened too! What an amazing date!!!</td>
 
-        <td>
-          <input />
 
-        </td>
-      </tr>
-      <tr>
-        <td><label>Journal Entry:</label></td>
-        <td><textarea class="scrollbar-primary"></textarea></td>
-      </tr>
-    </table>
-    <button class="Button-5">Submit</button>
-  </form>
+
+
+    </tr>
+  </table>
+  <!---<table class="table">
+    <tr>
+      <th>
+        @Html.DisplayNameFor(model => model.StudentName)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.Age)
+      </th>
+      <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.UserName)
+      </td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id=item.heading }) |
+        @Html.ActionLink("Details", "Details", new { id=item.journalentry  }) |
+      </td>
+    </tr>
+    }
+
+  </table>-->
 </div>
